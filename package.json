@@ -1,0 +1,62 @@
+{
+  "name": "Myapp",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bower": "1.4.1",
+    "gulp": "3.9.0",
+    "gulp-angular-templatecache": "1.7.0",
+    "gulp-clean": "0.3.1",
+    "gulp-concat": "2.1.7",
+    "gulp-connect": "1.1.1",
+    "gulp-expect-file": "0.0.7",
+    "gulp-jshint": "1.5.6",
+    "gulp-load-plugins": "0.4.0",
+    "gulp-minify-css": "0.3.13",
+    "gulp-ng-annotate": "0.2.0",
+    "gulp-uglify": "0.3.2",
+    "gulp-watch": "0.6.10",
+    "http-server": "0.6.1",
+    "path": "0.4.10",
+    "shelljs": "0.2.6"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "gulp",
+    "pretest": "npm install",
+    "test": "karma start tests/karma.conf.js",
+    "test-single-run": "karma start test/karma.conf.js  --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js",
+    "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
+  },
+  "dependencies": {
+    "angular-animate": "^1.4.8",
+    "angular-cookies": "^1.4.8",
+    "angular-mocks": "1.4.3",
+    "angular-sanitize": "^1.4.8",
+    "angular-touch": "^1.4.8",
+    "gulp-coverage": "0.3.36",
+    "gulp-karma": "0.0.4",
+    "gulp-sourcemaps": "1.5.2",
+    "jasmine-core": "2.3.4",
+    "karma": "0.12.37",
+    "karma-jasmine": "0.3.6",
+    "karma-phantomjs-launcher": "0.2.0",
+    "moment": "2.10.3",
+    "phantomjs": "1.9.17"
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

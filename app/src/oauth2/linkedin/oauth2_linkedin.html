@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-ls-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12">
+
+            linked in return uri
+
+            <div ng-if="userDemoData">
+
+                <h1>{{userDemoData.first_name}} {{userDemoData.last_name}}</h1>
+                <h4>{{userDemoData.title}}</h4>
+
+            </div>
+
+            <div ng-if="apiDemoError">
+
+                {{apiDemoError}}
+
+            </div>
+        </div>
+    </div>
+</div>

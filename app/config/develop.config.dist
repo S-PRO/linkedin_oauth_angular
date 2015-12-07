@@ -1,0 +1,29 @@
+/**
+ * Created by codestack on 07.12.15.
+ */
+(function () {
+    var
+        config_data = {
+            GENERAL_CONFIG: {
+                APP_NAME: 'myapp',
+                APP_VERSION: '0.1'
+            },
+            API_CONFIG: {
+                /**
+                 * your backend url
+                 */
+//                    API_URL: "http://localhost:3000/"              // for testing with local backend
+                API_URL: "http://192.168.0.102:3000/"              // for testing with device
+            },
+            PARSE_CONFIG: {                                     // for push notification
+                Application_ID: "Application_ID",
+                Client_Key: "Client_Key"
+            }
+        },
+        config_module = angular.module('general.config', []);
+
+    angular.forEach(config_data, function (key, value) {
+        config_module.constant(value, key);
+    });
+
+}());
